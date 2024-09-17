@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="../img/logo.jpg" alt="Logo" class="logo">
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="#" id="product-link">Product</a>
+                        <ul>
+                            <li><a href="#petroleum-bitumen">Refractory products</a></li>
+                            <li><a href="#grain-oil">Oil products</a></li>
+                            <li><a href="#refractories">Agricultural products</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li class="language-selector">
+                        <select id="language-select" onchange="changeLanguage(this.value)">
+                            <option value="en" data-icon="flag-icon-us" selected>EN</option>
+                            <option value="cn" data-icon="flag-icon-cn">CN</option>
+                            <option value="ru" data-icon="flag-icon-ru">RU</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container-upper">
+
+        <div class="container">
+
+            <div id="petroleum-bitumen" class="category-container">
+                <h2>Refractory products</h2>
+                <div class="category">
+                    <div class="product" onclick="window.location.href='Silica brick.html'">
+                        <img src="../img/silica_brick.png" alt="Silica brick">
+                        <div class="description">
+                            <h2>Silica brick</h2>
+                            <p>This is a short description of Product 1.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <div class="product" onclick="window.location.href='Slide gate.html'">
+                        <img src="../img/slide_gates.jpg" alt="Slide gate">
+                        <div class="description">
+                            <h2>Slide gate</h2>
+                            <p>This is a short description of Product 2.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <div class="product" onclick="window.location.href='Large crystal.html'">
+                        <img src="../img/Large_crystal.png" alt="Large crystal">
+                        <div class="description">
+                            <h2>Large crystal</h2>
+                            <p>This is a short description of Product 2.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <div class="product" onclick="window.location.href='MgO ball.html'">
+                        <img src="../img/MgO_Ball.png" alt="MgO ball">
+                        <div class="description">
+                            <h2>MgO ball</h2>
+                            <p>This is a short description of Product 2.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <div class="product" onclick="window.location.href='Dead Burned Magnesia.html'">
+                        <img src="../img/dead_burned_megnesia.png" alt="Dead Burned Magnesia">
+                        <div class="description">
+                            <h2>Dead Burned Magnesia</h2>
+                            <p>This is a short description of Product 2.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="grain-oil" class="category-container">
+                <h2>Oil products</h2>
+                <div class="category">
+                    <div class="product" onclick="window.location.href='Petroleum.html'">
+                        <img src="../img/HFO 180.png" alt="Petroleum">
+                        <div class="description">
+                            <h2>Heavy Fuel Oil</h2>
+                            <p>This is a short description of Product 3.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="refractories" class="category-container">
+                <h2>Agricultural products</h2>
+                <div class="category">
+                    <div class="product" onclick="window.location.href='Non GMO Soybeans.html'">
+                        <img src="../img/Non_GMO_Soybeans.png" alt="Non GMO Soybeans">
+                        <div class="description">
+                            <h2>Non GMO Soybeans</h2>
+                            <p>This is a short description of Product 5.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <div class="product" onclick="window.location.href='Chicken paw.html'">
+                        <img src="../img/Chicken_Paw.jpg" alt="Chicken paw">
+                        <div class="description">
+                            <h2>Chicken paw</h2>
+                            <p>This is a short description of Product 6.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <div class="product" onclick="window.location.href='Beef tripe.html'">
+                        <img src="../img/beef tripe.png" alt="Beef tripe">
+                        <div class="description">
+                            <h2>Beef tripe</h2>
+                            <p>This is a short description of Product 6.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <div class="product" onclick="window.location.href='Pork Feet.html'">
+                        <img src="../img/pig_trotter.jpg" alt="Pig trotter">
+                        <div class="description">
+                            <h2>Pig trotter</h2>
+                            <p>This is a short description of Product 6.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer menu for mobile -->
+    <div class="footer-menu">
+        <a href="../index.html" title="Home" onclick="toggleActive(this)">
+            <div class="icon-text">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+        </a>
+        <a href="./LearnMore.html" title="About Us" onclick="toggleActive(this)">
+            <div class="icon-text">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </div>
+        </a>
+        <a href="#" title="Products" onclick="toggleActive(this)">
+            <div class="icon-text">
+                <i class="fas fa-box"></i>
+                <span>Products</span>
+            </div>
+        </a>
+        <a href="./contact.html" title="Contact Us" onclick="toggleActive(this)">
+            <div class="icon-text">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </div>
+        </a>
+    </div>
+    <script>
+        document.getElementById('product-link').addEventListener('click', function (event) {
+            window.location.href = './products.html'
+        })
+        // 语言切换
+        document.getElementById('language-select').addEventListener('change', function () {
+            const selectedOption = this.options[this.selectedIndex]
+            const iconClass = selectedOption.getAttribute('data-icon')
+
+            this.className = iconClass // 设置下拉框的图标
+            changeLanguage(this.value) // 切换语言
+        })
+        // 初始加载时设置默认图标
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectElement = document.getElementById('language-select')
+            const selectedOption = selectElement.options[selectElement.selectedIndex]
+            const iconClass = selectedOption.getAttribute('data-icon')
+
+            selectElement.className = iconClass
+        })
+        //控制汉堡菜单
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.getElementById('hamburger-menu')
+            const navList = document.querySelector('nav ul.nav-list')
+
+            // 点击汉堡菜单，显示或隐藏导航菜单
+            hamburgerMenu.addEventListener('click', function () {
+                navList.classList.toggle('show-menu')
+            })
+
+            // 点击页面其他地方时，关闭导航菜单
+            document.addEventListener('click', function (event) {
+                if (!navList.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                    navList.classList.remove('show-menu')
+                }
+            })
+        })
+
+        function toggleActive (link) {
+            // 移除其他链接的 active 类
+            const allLinks = document.querySelectorAll('.footer-menu a')
+            allLinks.forEach(item => item.classList.remove('active'))
+
+            // 为当前点击的链接添加 active 类
+            link.classList.add('active')
+        }
+
+    </script>
+</body>
+
+</html>

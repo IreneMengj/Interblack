@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicken paw - Product Details</title>
+  <link rel="stylesheet" href="../css/IndividualProduct.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <img src="../img/logo.jpg" alt="Logo" class="logo">
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li>
+            <a href="#" id="product-link">Product</a>
+            <ul>
+              <li><a href="#petroleum-bitumen">Refractory products</a></li>
+              <li><a href="#grain-oil">Oil products</a></li>
+              <li><a href="#refractories">Agricultural products</a></li>
+            </ul>
+          </li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li class="language-selector">
+            <select id="language-select" onchange="changeLanguage(this.value)">
+              <option value="en" data-icon="flag-icon-us" selected>EN</option>
+              <option value="cn" data-icon="flag-icon-cn">CN</option>
+              <option value="ru" data-icon="flag-icon-ru">RU</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product-details">
+      <img src="../img/Chicken_Paw.jpg" alt="Chicken paw" class="product-image">
+      <div class="product-description">
+        <h1>Chicken Paw Specifications</h1>
+        <p>Below are the detailed specifications for our high-quality chicken paws.</p>
+
+        <h2>Technical Specifications:</h2>
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Specification</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Size</td>
+              <td>35g+ products must account for more than 80% of the total; 25g+ products must account for more than
+                80% of the total</td>
+            </tr>
+            <tr>
+              <td>Length</td>
+              <td>8-13cm</td>
+            </tr>
+            <tr>
+              <td>Freezing Method</td>
+              <td>Individually frozen, stored and transported below -18°C</td>
+            </tr>
+            <tr>
+              <td>Processing Method</td>
+              <td>100% fresh quick-freezing, freezing temperature -40°C, final core temperature ≤ -18°C</td>
+            </tr>
+            <tr>
+              <td>Broken Rate</td>
+              <td>Less than 1%</td>
+            </tr>
+            <tr>
+              <td>Antibiotics</td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td>Water Content</td>
+              <td>Less than 3%</td>
+            </tr>
+            <tr>
+              <td>Ice Content</td>
+              <td>Less than 3%</td>
+            </tr>
+            <tr>
+              <td>Packaging</td>
+              <td>Packaged in 2*10kg or 4*5kg vacuum PP bags, placed in cartons</td>
+            </tr>
+            <tr>
+              <td>Net Weight</td>
+              <td>Net weight not less than 20 kg, gross weight not more than 20.5 kg</td>
+            </tr>
+            <tr>
+              <td>Appearance</td>
+              <td>Removed outer yellow skin (white skin), no black spots, no mildew, no ammonia smell, normal odor</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <a href="contact.html" class="buy-now-button">Contact Us for Details</a>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer-menu">
+    <a href="../index.html" title="Home">
+      <div class="icon-text">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </div>
+    </a>
+    <a href="./LearnMore.html" title="About Us">
+      <div class="icon-text">
+        <i class="fas fa-info-circle"></i>
+        <span>About</span>
+      </div>
+    </a>
+    <a href="#" title="Products">
+      <div class="icon-text">
+        <i class="fas fa-box"></i>
+        <span>Products</span>
+      </div>
+    </a>
+    <a href="./contact.html" title="Contact Us">
+      <div class="icon-text">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </div>
+    </a>
+  </div>
+
+  <script>
+    // 语言切换
+    document.getElementById('language-select').addEventListener('change', function () {
+      const selectedOption = this.options[this.selectedIndex]
+      const iconClass = selectedOption.getAttribute('data-icon')
+
+      this.className = iconClass // 设置下拉框的图标
+      changeLanguage(this.value) // 切换语言
+    })
+    // 初始加载时设置默认图标
+    document.addEventListener('DOMContentLoaded', function () {
+      const selectElement = document.getElementById('language-select')
+      const selectedOption = selectElement.options[selectElement.selectedIndex]
+      const iconClass = selectedOption.getAttribute('data-icon')
+
+      selectElement.className = iconClass
+    })
+    //控制汉堡菜单
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburgerMenu = document.getElementById('hamburger-menu')
+      const navList = document.querySelector('nav ul.nav-list')
+
+      // 点击汉堡菜单，显示或隐藏导航菜单
+      hamburgerMenu.addEventListener('click', function () {
+        navList.classList.toggle('show-menu')
+      })
+
+      // 点击页面其他地方时，关闭导航菜单
+      document.addEventListener('click', function (event) {
+        if (!navList.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+          navList.classList.remove('show-menu')
+        }
+      })
+    })
+
+  </script>
+</body>
+
+</html>

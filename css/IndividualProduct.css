@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+}
+/* 基本导航样式 */
+.nav-container {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Hide hamburger menu by default */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+nav ul.nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul.nav-list li {
+  position: relative;
+  margin-right: 15px;
+}
+
+nav ul.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 20px;
+  display: block;
+}
+
+/* Dropdown menu */
+nav ul.nav-list li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+nav ul.nav-list li:hover ul {
+  display: block;
+}
+
+nav ul.nav-list li ul li {
+  width: 100%;
+}
+
+nav ul.nav-list li ul li a {
+  padding: 10px 15px;
+  color: #fff;
+}
+
+nav ul.nav-list li ul li a:hover {
+  background-color: #555;
+}
+
+/* Language selector */
+.language-selector select {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #333; /* 自定义边框颜色，去掉白色 */
+  border-radius: 5px;
+  background-color: #333; /* 背景颜色 */
+  color: #fff; /* 文字颜色 */
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 5px center; /* 调整图标的位置 */
+  background-size: 20px 15px; /* 调整图标的大小 */
+  padding-left: 30px; /* 为图标腾出空间 */
+}
+
+.language-selector select:focus {
+  outline: none;
+  border-color: #333;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  nav ul.nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  nav ul.nav-list.show-menu {
+    display: flex;
+  }
+
+  nav ul.nav-list li {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  nav ul.nav-list li a {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+main {
+  padding: 20px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.product-description {
+  margin-top: 20px;
+}
+
+.product-description h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.product-description p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-description ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.product-description ul li {
+  margin-bottom: 5px;
+}
+
+.product-description h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.product-table {
+  width: 100%;
+  max-width: 100%; /* 表格最大宽度限制 */
+  table-layout: fixed; /* 固定表格布局 */
+  border-collapse: collapse; /* 合并表格边框 */
+  margin-bottom: 20px;
+  overflow-x: auto; /* 启用水平滚动 */
+}
+
+.product-table th,
+.product-table td {
+  padding: 8px;
+  border: 1px solid #ddd; /* 添加表格边框 */
+  text-align: left;
+  word-wrap: break-word; /* 自动换行 */
+}
+
+.product-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.buy-now-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.buy-now-button:hover {
+  background-color: #0056b3;
+}
+/* Show footer menu on mobile devices */
+@media (max-width: 768px) {
+  /* Adjust product-details layout for mobile */
+  .product-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image {
+    width: 80%; /* Adjust width for mobile, making image take up more space */
+    margin-right: 0; /* Remove margin on right since it's now stacked */
+    margin-bottom: 20px; /* Add margin below the image for spacing */
+  }
+
+  .product-description {
+    width: 90%; /* Adjust width for mobile, making description take up more space */
+    text-align: left; /* Center the text for mobile layout */
+  }
+}
+
+/* Base styles for the footer menu */
+.footer-menu {
+  display: none; /* Hidden by default on larger screens */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Background color of footer menu */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  -webkit-touch-callout: none; /* Prevent callout on long press */
+  -webkit-user-select: none; /* Prevent text selection */
+  user-select: none;
+}
+
+/* Links inside the footer menu */
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column; /* Ensure icon is always above text */
+  align-items: center;
+  justify-content: center; /* Align text and icon to the center */
+  font-size: 14px; /* Adjust the font size for the text */
+  width: 25%; /* Ensures uniform width across devices */
+  box-sizing: border-box; /* Prevents padding from altering width */
+  -webkit-box-flex: 1; /* Compatibility for older iOS versions */
+  flex: 1;
+}
+
+/* Icons inside the footer menu */
+.footer-menu i {
+  font-size: 24px; /* Icon size */
+  margin-bottom: 5px; /* Space between icon and text */
+}
+
+/* Tooltip styles */
+.footer-menu a::after {
+  content: attr(title); /* Tooltip text */
+  position: absolute;
+  bottom: 100%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333; /* Background color of tooltip */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-size: 14px; /* Tooltip text size */
+}
+
+/* Show tooltip on hover */
+.footer-menu a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Active state for the icons */
+.footer-menu a.active i {
+  color: #007bff; /* Blue color for active icon */
+}
+
+/* Show footer menu on mobile devices */
+@media (max-width: 768px) {
+  .footer-menu {
+    display: flex;
+  }
+}
+
+/* Hide footer menu on larger screens */
+@media (min-width: 769px) {
+  .footer-menu {
+    display: none;
+  }
+}
+
+/* Additional styles for text below the icon */
+.footer-menu span {
+  font-size: 12px; /* Adjust text size below the icon */
+  margin-top: 5px; /* Space between the icon and the text */
+  line-height: 1; /* Adjust line height */
+  text-align: center; /* Ensure text is centered */
+  display: block; /* Ensures the text behaves like a block element */
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Interblack</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <img src="./img/logo.jpg" alt="Logo" class="logo">
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="./html/products.html" id="product-link">Product</a>
+                        <ul>
+                            <li><a href="./html/products.html#petroleum-bitumen">Refractory products</a></li>
+                            <li><a href="./html/products.html#grain-oil">Oil products</a></li>
+                            <li><a href="./html/products.html#refractories">Agricultural products</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./html/contact.html">Contact</a></li>
+                    <li class="language-selector">
+                        <select id="language-select" onchange="changeLanguage(this.value)">
+                            <option value="en" data-icon="flag-icon-us" selected>EN</option>
+                            <option value="cn" data-icon="flag-icon-cn">CN</option>
+                            <option value="ru" data-icon="flag-icon-ru">RU</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero-slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./img/lunbotu1.jpg" alt="bitumen 1">
+                    <h1>Welcome to Interblack</h1>
+                    <p>Move products, satisfy demands.</p>
+                    <a href="./html/LearnMore.html" class="btn">Learn more</a>
+                </div>
+                <div class="slide">
+                    <img src="./img/lunbotu2.jpg" alt="bitumen 2">
+                    <h1>Welcome to Interblack</h1>
+                    <p>Innovative solutions for a better future.</p>
+                    <a href="./html/LearnMore.html" class="btn">Learn more</a>
+                </div>
+                <div class="slide">
+                    <img src="./img/lunbotu1.jpg" alt="bitumen 3">
+                    <h1>Welcome to Interblack</h1>
+                    <p>Your trusted partner in business.</p>
+                    <a href="./html/LearnMore.html" class="btn">Learn more</a>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p id="about-text">
+                Welcome to Interblack, your premier partner in the dynamic realm of international trade. With a
+                steadfast
+                commitment to excellence, Interblack specializes in the global exchange of bulk commodities ranging from
+                crude oil and bitumen to agricultural products, grains, refractory materials, and more. Our expertise
+                lies in navigating the complexities of global markets, ensuring seamless transactions and optimal
+                outcomes for our esteemed clientele.
+                <br>
+                <br>
+                Founded on the principles of integrity, reliability, and innovation, Interblack leverages decades of
+                industry experience to deliver tailored solutions that meet the diverse needs of our partners worldwide.
+                Whether facilitating large-scale transactions or providing strategic market insights, we are dedicated
+                to fostering long-term relationships built on trust and mutual success.
+                <br>
+                <br>
+                At Interblack, we combine deep industry knowledge with a forward-thinking approach to anticipate market
+                trends and capitalize on emerging opportunities. Our comprehensive network, spanning across continents,
+                enables us to efficiently connect producers and consumers, driving value and growth in every
+                transaction.
+                <br>
+                <br>
+                As a trusted leader in international trade, Interblack continues to set the standard for excellence,
+                delivering results that propel businesses forward in a rapidly evolving global landscape. Join us in
+                redefining possibilities and unlocking new avenues for success in the world of bulk commodity trading.
+            </p>
+            <span class="show-more" onclick="toggleText()">Show More</span>
+        </div>
+    </section>
+
+
+    <section class="products-section">
+        <h2>Products</h2>
+        <div class="products-grid">
+            <div class="product-item">
+                <a href="./html/Petroleum.html">
+                    <img src="./img/HFO 180.png" alt="Petroleum">
+                    <h3>Heavy Fuel Oil</h3>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="./html/Slide gate.html">
+                    <img src="./img/slide_gates.jpg" alt="Bitumen">
+                    <h3>Slide gate</h3>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="./html/Sio2.html">
+                    <img src="./img/SiO2_9995.jpg" alt="Grain">
+                    <h3>Sio2</h3>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="./html/Silica brick.html">
+                    <img src="./img/silica_brick.png" alt="Petroleum">
+                    <h3>Silica brick</h3>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="./html/Large crystal.html">
+                    <img src="./img/Large_crystal.png" alt="Bitumen">
+                    <h3>Large crystal</h3>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="./html/MgO ball.html">
+                    <img src="./img/MgO_Ball.png" alt="Grain">
+                    <h3>MgO ball</h3>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="./html/Dead Burned Magnesia.html">
+                    <img src="./img/dead_burned_megnesia.png" alt="Oil">
+                    <h3> Dead Burned Magnesia</h3>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="./html/Non GMO Soybeans.html">
+                    <img src="./img/Non_GMO_Soybeans.png" alt="Oil">
+                    <h3>Non GMO Soybeans</h3>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="./html/Chicken paw.html">
+                    <img src="./img/Chicken_Paw.jpg" alt="Oil">
+                    <h3>Chicken paw</h3>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="./html/Beef tripe.html">
+                    <img src="./img/beef tripe.png" alt="Refractories">
+                    <h3>Beef tripe</h3>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="./html/Pork Feet.html">
+                    <img src="./img/pig_trotter.jpg" alt="Animal Viscera">
+                    <h3>Pig trotter</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-studies">
+        <h2>Our Case Studies</h2>
+        <div class="case-container">
+            <div class="case-item">
+                <img src="./img/bitumen1.jpg" alt="Case 1">
+                <div class="case-description">
+                    <h3>Case Study 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="case-item">
+                <img src="./img/bitumen1.jpg" alt="Case 2">
+                <div class="case-description">
+                    <h3>Case Study 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="advantages-section">
+        <h2>Our Advantages</h2>
+        <div class="advantages-grid">
+            <div class="advantage-item light-blue">
+                <h3>Quality Assurance</h3>
+                <p>We adhere to the highest standards of quality control to ensure that our products meet industry
+                    expectations.</p>
+            </div>
+            <div class="advantage-item dark-blue">
+                <h3>Global Reach</h3>
+                <p>Our extensive network allows us to distribute products worldwide, reaching markets across the globe
+                    efficiently.</p>
+            </div>
+            <div class="advantage-item light-blue">
+                <h3>Innovative Solutions</h3>
+                <p>We are at the forefront of innovation, constantly developing new solutions to meet emerging market
+                    demands.</p>
+            </div>
+            <div class="advantage-item dark-blue">
+                <h3>Customer Support</h3>
+                <p>Our dedicated support team is available 24/7 to assist with any inquiries or issues, ensuring a
+                    seamless experience.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="path/to/logo.png" alt="Company Logo">
+            </div>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="./html/LearnMore.html">About us</a>
+                <a href="./html/contact.html">Contact Us</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><img src="../img/whatsapp.jpg" alt="WhatsApp QR Code"></a>
+                <a href="#" class="social-icon"><img src="../img/wechat.jpg" alt="WeChat QR Code"></a>
+            </div>
+            <p>&copy; 2024 Apple Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer menu for mobile -->
+    <div class="footer-menu">
+        <a href="#" title="Home" onclick="toggleActive(this)">
+            <div class="icon-text">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+        </a>
+        <a href="./html/LearnMore.html" title="About Us" onclick="toggleActive(this)">
+            <div class="icon-text">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </div>
+        </a>
+        <a href="./html/products.html" title="Products" onclick="toggleActive(this)">
+            <div class="icon-text">
+                <i class="fas fa-box"></i>
+                <span>Products</span>
+            </div>
+        </a>
+        <a href="./html/contact.html" title="Contact Us" onclick="toggleActive(this)">
+            <div class="icon-text">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </div>
+        </a>
+    </div>
+
+
+    <script>
+        function toggleText () {
+            var text = document.getElementById("about-text")
+            var link = document.querySelector(".show-more")
+            var currentDisplay = window.getComputedStyle(text).display
+            if (currentDisplay === "-webkit-box" || currentDisplay === "none") {
+                text.style.display = "block"
+                link.textContent = "Show Less"
+            } else {
+                text.style.display = "-webkit-box"
+                link.textContent = "Show More"
+            }
+        }
+        //轮播图效果
+        let currentIndex = 0
+        const slides = document.querySelectorAll('.slide')
+        const dots = document.querySelectorAll('.dot')
+
+        function showSlide (index) {
+            if (index >= slides.length) {
+                currentIndex = 0
+            } else if (index < 0) {
+                currentIndex = slides.length - 1
+            } else {
+                currentIndex = index
+            }
+
+            document.querySelector('.slides').style.transform = `translateX(-${currentIndex * 100}%)`
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex))
+        }
+
+        function currentSlide (index) {
+            showSlide(index - 1)
+        }
+
+        function nextSlide () {
+            showSlide(currentIndex + 1)
+        }
+
+        function autoPlay () {
+            nextSlide()
+            setTimeout(autoPlay, 5000) // Auto-play every 5 seconds
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentIndex)
+            autoPlay()
+        })
+
+        document.getElementById('product-link').addEventListener('click', function (event) {
+            window.location.href = './html/products.html'
+        })
+
+        // 语言切换
+        document.getElementById('language-select').addEventListener('change', function () {
+            const selectedOption = this.options[this.selectedIndex]
+            const iconClass = selectedOption.getAttribute('data-icon')
+
+            this.className = iconClass // 设置下拉框的图标
+            changeLanguage(this.value) // 切换语言
+        })
+
+        // 初始加载时设置默认图标
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectElement = document.getElementById('language-select')
+            const selectedOption = selectElement.options[selectElement.selectedIndex]
+            const iconClass = selectedOption.getAttribute('data-icon')
+
+            selectElement.className = iconClass
+        })
+
+        //控制汉堡菜单
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerMenu = document.getElementById('hamburger-menu')
+            const navList = document.querySelector('nav ul.nav-list')
+
+            // 点击汉堡菜单，显示或隐藏导航菜单
+            hamburgerMenu.addEventListener('click', function () {
+                navList.classList.toggle('show-menu')
+            })
+
+            // 点击页面其他地方时，关闭导航菜单
+            document.addEventListener('click', function (event) {
+                if (!navList.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                    navList.classList.remove('show-menu')
+                }
+            })
+        })
+
+        function toggleActive (link) {
+            // 移除其他链接的 active 类
+            const allLinks = document.querySelectorAll('.footer-menu a')
+            allLinks.forEach(item => item.classList.remove('active'))
+
+            // 为当前点击的链接添加 active 类
+            link.classList.add('active')
+        }
+    </script>
+</body>
+
+</html>
