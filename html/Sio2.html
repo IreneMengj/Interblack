@@ -7,16 +7,39 @@
   <title>Sio2 - Product Details</title>
   <link rel="stylesheet" href="../css/IndividualProduct.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
 </head>
 
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="products.html">Product</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-container">
+        <img src="../img/logo.jpg" alt="Logo" class="logo">
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li>
+            <a href="#" id="product-link">Product</a>
+            <ul>
+              <li><a href="#petroleum-bitumen">Refractory products</a></li>
+              <li><a href="#grain-oil">Oil products</a></li>
+              <li><a href="#refractories">Agricultural products</a></li>
+            </ul>
+          </li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li class="language-selector">
+            <select id="language-select" onchange="changeLanguage(this.value)">
+              <option value="en" data-icon="flag-icon-us" selected>EN</option>
+              <option value="cn" data-icon="flag-icon-cn">CN</option>
+              <option value="ru" data-icon="flag-icon-ru">RU</option>
+            </select>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -24,28 +47,161 @@
     <div class="product-details">
       <img src="../img/SiO2_9995.jpg" alt="Sio2" class="product-image">
       <div class="product-description">
-        <h1>Sio2</h1>
-        <p>Pork feet, also known as trotters, are a popular ingredient in many cuisines around the world. They are
-          prized for their rich collagen content, which makes them ideal for slow-cooking methods such as braising. The
-          resulting dish is tender, flavorful, and full of nutrients.</p>
-        <p><strong>Key Features:</strong></p>
-        <ul>
-          <li>Rich in collagen and nutrients</li>
-          <li>Perfect for slow-cooking and braising</li>
-          <li>Used in various traditional dishes globally</li>
-        </ul>
-        <p><strong>Weight:</strong> 1kg - 5kg per pack</p>
-        <p><strong>Price:</strong> $15 per kg</p>
-        <a href="contact.html" class="buy-now-button">Contact Us for Purchase</a>
+        <h1>Quartz Sand - Sort 1</h1>
+        <p><strong>Manufacturer:</strong> Russia</p>
+        <p><strong>Deposit:</strong> Dodo quartz deposit</p>
+        <p><strong>Title Description:</strong> Quartz sand Sort 1</p>
+        <p><strong>Hygiene and Sanitary Description:</strong> Explosion proof, non-toxic, radiation free</p>
+        <p><strong>Net Weight:</strong> 1000 kg</p>
+        <p><strong>Manufacture Date:</strong> October 2023</p>
+
+        <h2>Chemical Analysis Results (ppm):</h2>
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Al</th>
+              <th>Ca</th>
+              <th>Co</th>
+              <th>Cr</th>
+              <th>Cu</th>
+              <th>Fe</th>
+              <th>K</th>
+              <th>Li</th>
+              <th>Mg</th>
+              <th>Mn</th>
+              <th>Na</th>
+              <th>Ni</th>
+              <th>Sr</th>
+              <th>Ti</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>49.1</td>
+              <td>41.5</td>
+              <td>&lt;0.01</td>
+              <td>0.11</td>
+              <td>&lt;0.01</td>
+              <td>17.7</td>
+              <td>11.30</td>
+              <td>0.76</td>
+              <td>3.85</td>
+              <td>0.76</td>
+              <td>35.3</td>
+              <td>0.09</td>
+              <td>0.76</td>
+              <td>1.95</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Screening Analysis Results:</h2>
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Feed Weight (g)</th>
+              <th>Screen Cell Size (μm)</th>
+              <th>Fraction Size (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>100</td>
+              <td>&gt;500</td>
+              <td>&lt;1</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>315-500</td>
+              <td>&lt;3</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>100-315</td>
+              <td>&gt;95</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>&lt;100</td>
+              <td>&lt;1</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><strong>Note:</strong> The chemical compound may change under conditions of packing or storage infringement
+          in the open air.</p>
+        <p><strong>Laboratory Chief:</strong> A.A.Veisov</p>
+
+        <a href="contact.html" class="buy-now-button">Contact Us for Details</a>
       </div>
     </div>
+
   </main>
 
+
   <div class="footer-menu">
-    <a href="../index.html" title="Home"><i class="fas fa-home"></i></a>
-    <a href="./LearnMore.html" title="About Us"><i class="fas fa-info-circle"></i></a>
-    <a href="./products.html" title="Products"><i class="fas fa-box"></i></a>
-    <a href="./contact.html" title="Contact Us"><i class="fas fa-envelope"></i></a>
+    <a href="../index.html">
+      <div class="icon-text">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </div>
+    </a>
+    <a href="./LearnMore.html">
+      <div class="icon-text">
+        <i class="fas fa-info-circle"></i>
+        <span>About</span>
+      </div>
+    </a>
+    <a href="./products.html">
+      <div class="icon-text">
+        <i class="fas fa-box"></i>
+        <span>Products</span>
+      </div>
+    </a>
+    <a href="./contact.html">
+      <div class="icon-text">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </div>
+    </a>
+
+    <script>
+      // 语言切换
+      document.getElementById('language-select').addEventListener('change', function () {
+        const selectedOption = this.options[this.selectedIndex]
+        const iconClass = selectedOption.getAttribute('data-icon')
+
+        this.className = iconClass // 设置下拉框的图标
+        changeLanguage(this.value) // 切换语言
+      })
+      // 初始加载时设置默认图标
+      document.addEventListener('DOMContentLoaded', function () {
+        const selectElement = document.getElementById('language-select')
+        const selectedOption = selectElement.options[selectElement.selectedIndex]
+        const iconClass = selectedOption.getAttribute('data-icon')
+
+        selectElement.className = iconClass
+      })
+      //控制汉堡菜单
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerMenu = document.getElementById('hamburger-menu')
+        const navList = document.querySelector('nav ul.nav-list')
+
+        // 点击汉堡菜单，显示或隐藏导航菜单
+        hamburgerMenu.addEventListener('click', function () {
+          navList.classList.toggle('show-menu')
+        })
+
+        // 点击页面其他地方时，关闭导航菜单
+        document.addEventListener('click', function (event) {
+          if (!navList.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+            navList.classList.remove('show-menu')
+          }
+        })
+      })
+
+    </script>
   </div>
 </body>
 
