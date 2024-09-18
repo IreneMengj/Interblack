@@ -12,11 +12,33 @@
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="products.html">Product</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-container">
+        <img src="../img/logo.jpg" alt="Logo" class="logo">
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li>
+            <a href="./products.html" id="product-link">Product</a>
+            <ul>
+              <li><a href="#petroleum-bitumen">Refractory products</a></li>
+              <li><a href="#grain-oil">Oil products</a></li>
+              <li><a href="#refractories">Agricultural products</a></li>
+            </ul>
+          </li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li class="language-selector">
+            <select id="language-select" onchange="changeLanguage(this.value)">
+              <option value="en" data-icon="flag-icon-us" selected>EN</option>
+              <option value="cn" data-icon="flag-icon-cn">CN</option>
+              <option value="ru" data-icon="flag-icon-ru">RU</option>
+            </select>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -24,29 +46,158 @@
     <div class="product-details">
       <img src="../img/MgO_Ball.png" alt="MgO ball" class="product-image">
       <div class="product-description">
-        <h1>MgO ball</h1>
-        <p>Pork feet, also known as trotters, are a popular ingredient in many cuisines around the world. They are
-          prized for their rich collagen content, which makes them ideal for slow-cooking methods such as braising. The
-          resulting dish is tender, flavorful, and full of nutrients.</p>
-        <p><strong>Key Features:</strong></p>
-        <ul>
-          <li>Rich in collagen and nutrients</li>
-          <li>Perfect for slow-cooking and braising</li>
-          <li>Used in various traditional dishes globally</li>
-        </ul>
-        <p><strong>Weight:</strong> 1kg - 5kg per pack</p>
-        <p><strong>Price:</strong> $15 per kg</p>
-        <a href="contact.html" class="buy-now-button">Contact Us for Purchase</a>
+        <h1>Magnesia Flux</h1>
+
+        <h2>Description</h2>
+        <p>Light-burned magnesia balls are made from ordinary light-burned magnesia powder which is pressed into balls
+          after mixing. They are mainly used in converter steelmaking splashing slag to protect the furnace and can
+          extend the furnace life.</p>
+        <p>The preparation process involves adding 80% light-burned magnesia powder to 20% water mixing and pressing for
+          15-20 minutes. The material is then conveyed to the ball press to form the product, which is air-dried over 48
+          hours until sufficient strength is achieved for sale.</p>
+        <p>Light-burned magnesia balls act as a slag component regulator in converter steelmaking. Appropriate slag
+          viscosity and refractoriness are key, so magnesium oxide balls are added, replacing dolomite. This increases
+          MgO content in the slag and reduces its quantity.</p>
+        <p>Due to the high melting point of magnesium oxide (2800°C), increasing its content in the slag increases
+          viscosity and refractoriness, helping the slag bond with the furnace lining, forming a protective layer that
+          extends furnace life and reduces consumption.</p>
+        <p>After a U.S. steel company adopted this technology, its furnace life reached nearly 20,000 heats, with a
+          converter operating rate of 97%. This process is used in countries such as West Germany, South Korea, Japan,
+          and Taiwan, and steel companies like Taiyuan Steel and Chengde Steel, extending furnace life to up to 12,000
+          heats and achieving significant economic benefits.</p>
+
+        <h2>Requirements for Magnesia Flux</h2>
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MgO content</td>
+              <td>≥ 80%</td>
+            </tr>
+            <tr>
+              <td>CaO content</td>
+              <td>≤ 8%</td>
+            </tr>
+            <tr>
+              <td>SiO2 content</td>
+              <td>≤ 2.5%</td>
+            </tr>
+            <tr>
+              <td>Fe2O3 content</td>
+              <td>≤ 8%</td>
+            </tr>
+            <tr>
+              <td>Fractional composition</td>
+              <td>≥ 90% of the batch 10-50 mm</td>
+            </tr>
+            <tr>
+              <td>State</td>
+              <td>Ready for use</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Converter Slag Characteristics</h2>
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Characteristic</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Slag basicity (CaO + MgO) / SiO2</td>
+              <td>≥ 2.3</td>
+            </tr>
+            <tr>
+              <td>Total FeO content in slag</td>
+              <td>≤ 18%</td>
+            </tr>
+            <tr>
+              <td>Total MgO content in slag</td>
+              <td>≥ 4%</td>
+            </tr>
+            <tr>
+              <td>Volume of converter slag per melt m³</td>
+              <td>6-7</td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="contact.html" class="buy-now-button">Contact Us for Details</a>
       </div>
     </div>
   </main>
 
   <div class="footer-menu">
-    <a href="../index.html" title="Home"><i class="fas fa-home"></i></a>
-    <a href="./LearnMore.html" title="About Us"><i class="fas fa-info-circle"></i></a>
-    <a href="#" title="Products"><i class="fas fa-box"></i></a>
-    <a href="./contact.html" title="Contact Us"><i class="fas fa-envelope"></i></a>
+    <a href="../index.html">
+      <div class="icon-text">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </div>
+    </a>
+    <a href="./LearnMore.html">
+      <div class="icon-text">
+        <i class="fas fa-info-circle"></i>
+        <span>About</span>
+      </div>
+    </a>
+    <a href="./products.html">
+      <div class="icon-text">
+        <i class="fas fa-box"></i>
+        <span>Products</span>
+      </div>
+    </a>
+    <a href="./contact.html">
+      <div class="icon-text">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </div>
+    </a>
   </div>
+
+  <script>
+    // 语言切换
+    document.getElementById('language-select').addEventListener('change', function () {
+      const selectedOption = this.options[this.selectedIndex]
+      const iconClass = selectedOption.getAttribute('data-icon')
+
+      this.className = iconClass // 设置下拉框的图标
+      changeLanguage(this.value) // 切换语言
+    })
+    // 初始加载时设置默认图标
+    document.addEventListener('DOMContentLoaded', function () {
+      const selectElement = document.getElementById('language-select')
+      const selectedOption = selectElement.options[selectElement.selectedIndex]
+      const iconClass = selectedOption.getAttribute('data-icon')
+
+      selectElement.className = iconClass
+    })
+    //控制汉堡菜单
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburgerMenu = document.getElementById('hamburger-menu')
+      const navList = document.querySelector('nav ul.nav-list')
+
+      // 点击汉堡菜单，显示或隐藏导航菜单
+      hamburgerMenu.addEventListener('click', function () {
+        navList.classList.toggle('show-menu')
+      })
+
+      // 点击页面其他地方时，关闭导航菜单
+      document.addEventListener('click', function (event) {
+        if (!navList.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+          navList.classList.remove('show-menu')
+        }
+      })
+    })
+
+  </script>
 </body>
 
 </html>
