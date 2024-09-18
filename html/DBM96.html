@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicken paw - Product Details</title>
+  <link rel="stylesheet" href="../css/IndividualProduct.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <img src="../img/logo.jpg" alt="Logo" class="logo">
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li>
+            <a href="./products.html" id="product-link">Product</a>
+            <ul>
+              <li><a href="#petroleum-bitumen">Refractory products</a></li>
+              <li><a href="#grain-oil">Oil products</a></li>
+              <li><a href="#refractories">Agricultural products</a></li>
+            </ul>
+          </li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li class="language-selector">
+            <select id="language-select" onchange="changeLanguage(this.value)">
+              <option value="en" data-icon="flag-icon-us" selected>EN</option>
+              <option value="cn" data-icon="flag-icon-cn">CN</option>
+              <option value="ru" data-icon="flag-icon-ru">RU</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="product-details">
+      <img src="../img/DBM96.png" alt="DBM96" class="product-image">
+      <div class="product-description">
+        <h1>Calcined Bauxite</h1>
+        <p>Calcined Bauxite is an important raw material for the production of high-alumina refractories. It is also
+          widely used in various industrial applications due to its hardness, strength, and excellent heat-resistance
+          properties.</p>
+
+        <h2>Specifications:</h2>
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Characteristic</th>
+              <th>Unit</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Al2O3</td>
+              <td>%</td>
+              <td>> 85</td>
+            </tr>
+            <tr>
+              <td>Fe2O3</td>
+              <td>%</td>
+              <td>
+                < 3</td>
+            </tr>
+            <tr>
+              <td>SiO2</td>
+              <td>%</td>
+              <td>
+                < 7</td>
+            </tr>
+            <tr>
+              <td>Tio2</td>
+              <td>%</td>
+              <td>
+                < 4</td>
+            </tr>
+            <tr>
+              <td>Bulk Density</td>
+              <td>g/cm³</td>
+              <td>> 2.90</td>
+            </tr>
+            <tr>
+              <td>Refractoriness</td>
+              <td>°C</td>
+              <td>> 1780</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Applications:</h2>
+        <ul>
+          <li>Production of high-alumina refractories</li>
+          <li>Abrasive materials</li>
+          <li>Steel and cement industries</li>
+          <li>Reinforced concrete materials</li>
+        </ul>
+
+        <h2>Packaging:</h2>
+        <p>Calcined Bauxite is available in bulk, jumbo bags, and small bags depending on customer requirements.</p>
+
+        <a href="contact.html" class="buy-now-button">Contact Us for Details</a>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer-menu">
+    <a href="../index.html">
+      <div class="icon-text">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </div>
+    </a>
+    <a href="./LearnMore.html">
+      <div class="icon-text">
+        <i class="fas fa-info-circle"></i>
+        <span>About</span>
+      </div>
+    </a>
+    <a href="./products.html">
+      <div class="icon-text">
+        <i class="fas fa-box"></i>
+        <span>Products</span>
+      </div>
+    </a>
+    <a href="./contact.html">
+      <div class="icon-text">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </div>
+    </a>
+  </div>
+
+  <script>
+    // 语言切换
+    document.getElementById('language-select').addEventListener('change', function () {
+      const selectedOption = this.options[this.selectedIndex]
+      const iconClass = selectedOption.getAttribute('data-icon')
+
+      this.className = iconClass // 设置下拉框的图标
+      changeLanguage(this.value) // 切换语言
+    })
+    // 初始加载时设置默认图标
+    document.addEventListener('DOMContentLoaded', function () {
+      const selectElement = document.getElementById('language-select')
+      const selectedOption = selectElement.options[selectElement.selectedIndex]
+      const iconClass = selectedOption.getAttribute('data-icon')
+
+      selectElement.className = iconClass
+    })
+    //控制汉堡菜单
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburgerMenu = document.getElementById('hamburger-menu')
+      const navList = document.querySelector('nav ul.nav-list')
+
+      // 点击汉堡菜单，显示或隐藏导航菜单
+      hamburgerMenu.addEventListener('click', function () {
+        navList.classList.toggle('show-menu')
+      })
+
+      // 点击页面其他地方时，关闭导航菜单
+      document.addEventListener('click', function (event) {
+        if (!navList.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+          navList.classList.remove('show-menu')
+        }
+      })
+    })
+
+  </script>
+</body>
+
+</html>
