@@ -21,16 +21,17 @@
                     <span></span>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html" id="home-link">Home</a></li>
                     <li>
                         <a href="./products.html" id="product-link">Product</a>
                         <ul>
-                            <li><a href="./products.html#petroleum-bitumen">Refractory products</a></li>
-                            <li><a href="./products.html#grain-oil">Oil products</a></li>
-                            <li><a href="./products.html#refractories">Agricultural products</a></li>
+                            <li><a href="./products.html#petroleum-bitumen" id="ref-product">Refractory products</a>
+                            </li>
+                            <li><a href="./products.html#grain-oil" id="oil-product">Oil products</a></li>
+                            <li><a href="./products.html#refractories" id="agri-product">Agricultural products</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" id="contact-link">Contact</a></li>
                     <li class="language-selector">
                         <select id="language-select" onchange="changeLanguage(this.value)">
                             <option value="en" data-icon="flag-icon-us" selected>EN</option>
@@ -45,35 +46,36 @@
     <div class="container-upper">
         <div class="container">
             <div class="contact-info">
-                <h2>Contact Information</h2>
+                <h2 id="contact-title">Contact Information</h2>
                 <p><strong>Name:</strong> Aaron Wang</p>
                 <p><strong>Phone (CHN):</strong> +8618701355853</p>
                 <p><strong>Phone (DE):</strong> +4917656765568</p>
                 <p><strong>Email:</strong> kingexcel@163.com</p>
                 <div class="qr-codes">
-                    <p><strong>WhatsApp:</strong></p>
+                    <p><strong id="whatsapp-label">WhatsApp:</strong></p>
                     <img src="../img/whatsapp.jpg" alt="WhatsApp QR Code">
-                    <p><strong>WeChat:</strong></p>
+                    <p><strong id="wechat-label">WeChat:</strong></p>
                     <img src="../img/wechat.jpg" alt="WeChat QR Code">
                 </div>
             </div>
             <div class="form-container">
                 <form action="https://formspree.io/f/xqazlokd" method="POST">
-                    <label for="message">Message</label>
+                    <label for="message" id="message-label">Message</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
 
-                    <label for="name">Name</label>
+                    <label for="name" id="name-label">Name</label>
                     <input type="text" id="name" name="name" required>
 
-                    <label for="phone">Phone</label>
+                    <label for="phone" id="phone-label">Phone</label>
                     <input type="tel" id="phone" name="phone" required>
 
-                    <label for="email">E-Mail</label>
+                    <label for="email" id="email-label">E-Mail</label>
                     <input type="email" id="email" name="email">
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submit-btn">Submit</button>
                 </form>
             </div>
+
             <!-- Footer menu for mobile -->
             <div class="footer-menu">
                 <a href="../index.html" onclick="toggleActive(this)">
@@ -104,8 +106,84 @@
         </div>
     </div>
     <script>
+        const translations = {
+            en: {
+                home: 'Home',
+                product: 'Product',
+                refProduct: 'Refractory products',
+                oilProduct: 'Oil products',
+                agriProduct: 'Agricultural products',
+                contact: 'Contact',
+                contactTitle: 'Contact Information',
+                whatsapp: 'WhatsApp:',
+                wechat: 'WeChat:',
+                message: 'Message',
+                name: 'Name',
+                phone: 'Phone',
+                email: 'E-Mail',
+                submit: 'Submit',
+            },
+            cn: {
+                home: '首页',
+                product: '产品',
+                refProduct: '耐火产品',
+                oilProduct: '石油产品',
+                agriProduct: '农产品',
+                contact: '联系我们',
+                contactTitle: '联系信息',
+                whatsapp: 'WhatsApp:',
+                wechat: '微信:',
+                message: '留言',
+                name: '姓名',
+                phone: '电话',
+                email: '电子邮箱',
+                submit: '提交',
+            },
+            ru: {
+                home: 'Главная',
+                product: 'Продукция',
+                refProduct: 'Огнеупорные продукты',
+                oilProduct: 'Нефтяные продукты',
+                agriProduct: 'Сельскохозяйственные продукты',
+                contact: 'Контакт',
+                contactTitle: 'Контактная информация',
+                whatsapp: 'WhatsApp:',
+                wechat: 'WeChat:',
+                message: 'Сообщение',
+                name: 'Имя',
+                phone: 'Телефон',
+                email: 'Эл. почта',
+                submit: 'Отправить',
+            }
+        }
+
         document.getElementById('product-link').addEventListener('click', function (event) {
             window.location.href = './html/products.html'
+        })
+
+        function changeLanguage (language) {
+            document.getElementById('home-link').textContent = translations[language].home
+            document.getElementById('product-link').textContent = translations[language].product
+            document.getElementById('ref-product').textContent = translations[language].refProduct
+            document.getElementById('oil-product').textContent = translations[language].oilProduct
+            document.getElementById('agri-product').textContent = translations[language].agriProduct
+            document.getElementById('contact-link').textContent = translations[language].contact
+
+            // 更新联系信息部分
+            document.getElementById('contact-title').textContent = translations[language].contactTitle
+            document.getElementById('whatsapp-label').textContent = translations[language].whatsapp
+            document.getElementById('wechat-label').textContent = translations[language].wechat
+
+            // 更新表单字段
+            document.getElementById('message-label').textContent = translations[language].message
+            document.getElementById('name-label').textContent = translations[language].name
+            document.getElementById('phone-label').textContent = translations[language].phone
+            document.getElementById('email-label').textContent = translations[language].email
+            document.getElementById('submit-btn').textContent = translations[language].submit
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            changeLanguage('en')
         })
 
         // 语言切换
