@@ -135,7 +135,6 @@
                         <img src="../img/pig_trotter.jpg" alt="Pig trotter">
                         <div class="description">
                             <h2>Pig trotter</h2>
-                            <p>This is a short description of Pig trotter.</p>
                             <button>Learn More</button>
                         </div>
                     </div>
@@ -172,6 +171,101 @@
         </a>
     </div>
     <script>
+        const translations = {
+            en: {
+                home: 'Home',
+                product: 'Product',
+                refProduct: 'Refractory products',
+                oilProduct: 'Oil products',
+                agriProduct: 'Agricultural products',
+                contact: 'Contact',
+                products: [
+                    { name: 'Heavy Fuel Oil', imgAlt: 'Petroleum', imgSrc: './img/HFO 180.png', href: './html/Petroleum.html' },
+                    { name: 'Slide gate', imgAlt: 'Bitumen', imgSrc: './img/slide_gates.jpg', href: './html/Slide gate.html' },
+                    { name: 'Sio2', imgAlt: 'Grain', imgSrc: './img/SiO2_9995.jpg', href: './html/Sio2.html' },
+                    { name: 'Silica brick', imgAlt: 'Petroleum', imgSrc: './img/silica_brick.png', href: './html/Silica brick.html' },
+                    { name: 'Large crystal', imgAlt: 'Bitumen', imgSrc: './img/Large_crystal.png', href: './html/Large crystal.html' },
+                    { name: 'MgO ball', imgAlt: 'Grain', imgSrc: './img/MgO_Ball.png', href: './html/MgO ball.html' },
+                    { name: 'Dead Burned Magnesia', imgAlt: 'Oil', imgSrc: './img/dead_burned_megnesia.png', href: './html/DBM96.html' },
+                    { name: 'Bauxite', imgAlt: 'Oil', imgSrc: './img/Bauxite.png', href: './html/Bauxite.html' },
+                    { name: 'Chicken paw', imgAlt: 'Oil', imgSrc: './img/Chicken_Paw.jpg', href: './html/Chicken paw.html' },
+                    { name: 'Beef Omasum', imgAlt: 'Refractories', imgSrc: './img/beef tripe.png', href: './html/Beef tripe.html' },
+                    { name: 'Pig trotter', imgAlt: 'Animal Viscera', imgSrc: './img/pig_trotter.jpg', href: './html/Pork Feet.html' }
+                ]
+            },
+            cn: {
+                home: '首页',
+                product: '产品',
+                refProduct: '耐火产品',
+                oilProduct: '石油产品',
+                agriProduct: '农产品',
+                contact: '联系我们',
+                products: [
+                    { name: '重油', imgAlt: '重油', imgSrc: './img/HFO 180.png', href: './html/Petroleum.html' },
+                    { name: '滑门', imgAlt: '滑门', imgSrc: './img/slide_gates.jpg', href: './html/Slide gate.html' },
+                    { name: 'Sio2', imgAlt: 'Sio2', imgSrc: './img/SiO2_9995.jpg', href: './html/Sio2.html' },
+                    { name: '硅砖', imgAlt: '硅砖', imgSrc: './img/silica_brick.png', href: './html/Silica brick.html' },
+                    { name: '大晶体', imgAlt: '大晶体', imgSrc: './img/Large_crystal.png', href: './html/Large crystal.html' },
+                    { name: 'MgO 球', imgAlt: 'MgO 球', imgSrc: './img/MgO_Ball.png', href: './html/MgO ball.html' },
+                    { name: '烧结镁砂', imgAlt: '烧结镁砂', imgSrc: './img/dead_burned_megnesia.png', href: './html/DBM96.html' },
+                    { name: '铝土矿', imgAlt: '铝土矿', imgSrc: './img/Bauxite.png', href: './html/Bauxite.html' },
+                    { name: '鸡爪', imgAlt: '鸡爪', imgSrc: './img/Chicken_Paw.jpg', href: './html/Chicken paw.html' },
+                    { name: '牛肚', imgAlt: '牛肚', imgSrc: './img/beef tripe.png', href: './html/Beef tripe.html' },
+                    { name: '猪蹄', imgAlt: '猪蹄', imgSrc: './img/pig_trotter.jpg', href: './html/Pork Feet.html' }
+                ]
+            },
+            ru: {
+                home: 'Главная',
+                product: 'Продукция',
+                refProduct: 'Огнеупорные продукты',
+                oilProduct: 'Нефтяные продукты',
+                agriProduct: 'Сельскохозяйственные продукты',
+                contact: 'Контакт',
+                products: [
+                    { name: 'Тяжелое топливо', imgAlt: 'Тяжелое топливо', imgSrc: './img/HFO 180.png', href: './html/Petroleum.html' },
+                    { name: 'Задвижка', imgAlt: 'Задвижка', imgSrc: './img/slide_gates.jpg', href: './html/Slide gate.html' },
+                    { name: 'Sio2', imgAlt: 'Sio2', imgSrc: './img/SiO2_9995.jpg', href: './html/Sio2.html' },
+                    { name: 'Кремнеземный кирпич', imgAlt: 'Кремнеземный кирпич', imgSrc: './img/silica_brick.png', href: './html/Silica brick.html' },
+                    { name: 'Крупный кристалл', imgAlt: 'Крупный кристалл', imgSrc: './img/Large_crystal.png', href: './html/Large crystal.html' },
+                    { name: 'MgO шар', imgAlt: 'MgO шар', imgSrc: './img/MgO_Ball.png', href: './html/MgO ball.html' },
+                    { name: 'Обожжённый магнезит', imgAlt: 'Обожжённый магнезит', imgSrc: './img/dead_burned_megnesia.png', href: './html/DBM96.html' },
+                    { name: 'Боксит', imgAlt: 'Боксит', imgSrc: './img/Bauxite.png', href: './html/Bauxite.html' },
+                    { name: 'Куриные лапы', imgAlt: 'Куриные лапы', imgSrc: './img/Chicken_Paw.jpg', href: './html/Chicken paw.html' },
+                    { name: 'Говяжий рубец', imgAlt: 'Говяжий рубец', imgSrc: './img/beef tripe.png', href: './html/Beef tripe.html' },
+                    { name: 'Свиной ножка', imgAlt: 'Свиной ножка', imgSrc: './img/pig_trotter.jpg', href: './html/Pork Feet.html' }
+                ]
+            }
+        }
+        function changeLanguage (language) {
+            document.getElementById('home-link').textContent = translations[language].home
+            document.getElementById('product-link').textContent = translations[language].product
+            document.getElementById('ref-product').textContent = translations[language].refProduct
+            document.getElementById('oil-product').textContent = translations[language].oilProduct
+            document.getElementById('agri-product').textContent = translations[language].agriProduct
+            document.getElementById('contact-link').textContent = translations[language].contact
+
+            // 更新产品部分
+            const productsGrid = document.querySelector('.products-grid')
+            productsGrid.innerHTML = ''  // 清空现有的产品项
+
+            translations[language].products.forEach(product => {
+                const productItem = `
+                    <div class="product-item">
+                        <a href="${product.href}">
+                            <img src="${product.imgSrc}" alt="${product.imgAlt}">
+                            <h3>${product.name}</h3>
+                        </a>
+                    </div>
+                `
+                productsGrid.innerHTML += productItem
+            })
+        }
+
+        // 初始加载时设置默认图标和语言
+        document.addEventListener('DOMContentLoaded', function () {
+            changeLanguage('en')
+        })
+
         document.getElementById('product-link').addEventListener('click', function (event) {
             window.location.href = './products.html'
         })
