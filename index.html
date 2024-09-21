@@ -234,16 +234,17 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="path/to/logo.png" alt="Company Logo">
+                <img src="./img/logo.jpg" alt="Company Logo">
             </div>
             <div class="footer-links">
                 <a href="#">Home</a>
                 <a href="./html/LearnMore.html">About us</a>
+                <a href="./html/products.html">Product</a>
                 <a href="./html/contact.html">Contact Us</a>
             </div>
             <div class="footer-socials">
-                <a href="#" class="social-icon"><img src="../img/whatsapp.jpg" alt="WhatsApp QR Code"></a>
-                <a href="#" class="social-icon"><img src="../img/wechat.jpg" alt="WeChat QR Code"></a>
+                <a href="#" class="social-icon"><img src="./img/whatsapp.jpg" alt="WhatsApp QR Code"></a>
+                <a href="#" class="social-icon"><img src="./img/wechat.jpg" alt="WeChat QR Code"></a>
             </div>
             <p>&copy; 2024 Apple Inc. All rights reserved.</p>
         </div>
@@ -425,8 +426,10 @@
             })
 
             // 更新页脚
+            document.querySelector('.footer-links a:nth-child(1)').textContent = translations[language].home
             document.querySelector('.footer-links a:nth-child(2)').textContent = translations[language].footer.aboutUs
-            document.querySelector('.footer-links a:nth-child(3)').textContent = translations[language].footer.contactUs
+            document.querySelector('.footer-links a:nth-child(3)').textContent = translations[language].product
+            document.querySelector('.footer-links a:nth-child(4)').textContent = translations[language].footer.contactUs
             document.querySelector('.footer-content p').textContent = `&copy; 2024 ${translations[language].footer.rights}`
         }
 
