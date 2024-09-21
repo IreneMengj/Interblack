@@ -25,9 +25,9 @@
                     <li>
                         <a href="#" id="product-link" id="product-link">Product</a>
                         <ul>
-                            <li><a href="#petroleum-bitumen" id="ref-product">Refractory products</a></li>
-                            <li><a href="#grain-oil" id="oil-product">Oil products</a></li>
-                            <li><a href="#refractories" id="agri-product">Agricultural products</a></li>
+                            <li><a href="#petroleum-bitumen" class="ref-product">Refractory products</a></li>
+                            <li><a href="#grain-oil" class="oil-product">Oil products</a></li>
+                            <li><a href="#refractories" class="agri-product">Agricultural products</a></li>
                         </ul>
                     </li>
                     <li><a href="./contact.html" id="contact-link">Contact</a></li>
@@ -43,106 +43,33 @@
         </nav>
     </header>
     <div class="container-upper">
-
         <div class="container">
-
+            <!-- Refractory Products Section -->
             <div id="petroleum-bitumen" class="category-container">
-                <h2>Refractory products</h2>
-                <div class="category">
-                    <div class="product" onclick="window.location.href='Silica brick.html'">
-                        <img src="../img/silica_brick.png" alt="Silica brick">
-                        <div class="description">
-                            <h2>Silica brick</h2>
-
-                            <button>Learn More</button>
-                        </div>
-                    </div>
-                    <div class="product" onclick="window.location.href='Slide gate.html'">
-                        <img src="../img/slide_gates.jpg" alt="Slide gate">
-                        <div class="description">
-                            <h2>Slide gate</h2>
-
-                            <button>Learn More</button>
-                        </div>
-                    </div>
-                    <div class="product" onclick="window.location.href='Large crystal.html'">
-                        <img src="../img/Large_crystal.png" alt="Large crystal">
-                        <div class="description">
-                            <h2>Large crystal</h2>
-
-                            <button>Learn More</button>
-                        </div>
-                    </div>
-                    <div class="product" onclick="window.location.href='MgO ball.html'">
-                        <img src="../img/MgO_Ball.png" alt="MgO ball">
-                        <div class="description">
-                            <h2>MgO ball</h2>
-
-                            <button>Learn More</button>
-                        </div>
-                    </div>
-                    <div class="product" onclick="window.location.href='DBM96.html'">
-                        <img src="../img/dead_burned_megnesia.png" alt="Dead Burned Magnesia">
-                        <div class="description">
-                            <h2>Dead Burned Magnesia</h2>
-
-                            <button>Learn More</button>
-                        </div>
-                    </div>
-                    <div class="product" onclick="window.location.href='Bauxite.html'">
-                        <img src="../img/Bauxite.png" alt="Bauxite">
-                        <div class="description">
-                            <h2>Bauxite</h2>
-
-                            <button>Learn More</button>
-                        </div>
-                    </div>
+                <h2 class="ref-product">Refractory products</h2>
+                <div class="category" id="refractory-products">
+                    <!-- 产品项将由 JavaScript 动态生成 -->
                 </div>
             </div>
+
+            <!-- Oil Products Section -->
             <div id="grain-oil" class="category-container">
-                <h2>Oil products</h2>
-                <div class="category">
-                    <div class="product" onclick="window.location.href='Petroleum.html'">
-                        <img src="../img/HFO 180.png" alt="Petroleum">
-                        <div class="description">
-                            <h2>Heavy Fuel Oil</h2>
-
-                            <button>Learn More</button>
-                        </div>
-                    </div>
+                <h2 class="oil-product">Oil products</h2>
+                <div class="category" id="oil-products">
+                    <!-- 产品项将由 JavaScript 动态生成 -->
                 </div>
             </div>
+
+            <!-- Agricultural Products Section -->
             <div id="refractories" class="category-container">
-                <h2>Agricultural products</h2>
-                <div class="category">
-                    <div class="product" onclick="window.location.href='Chicken paw.html'">
-                        <img src="../img/Chicken_Paw.jpg" alt="Chicken paw">
-                        <div class="description">
-                            <h2>Chicken paw</h2>
-
-                            <button>Learn More</button>
-                        </div>
-                    </div>
-                    <div class="product" onclick="window.location.href='Beef tripe.html'">
-                        <img src="../img/beef tripe.png" alt="Beef tripe">
-                        <div class="description">
-                            <h2>Beef Omasum</h2>
-
-                            <button>Learn More</button>
-                        </div>
-                    </div>
-                    <div class="product" onclick="window.location.href='Pork Feet.html'">
-                        <img src="../img/pig_trotter.jpg" alt="Pig trotter">
-                        <div class="description">
-                            <h2>Pig trotter</h2>
-                            <button>Learn More</button>
-                        </div>
-                    </div>
+                <h2 class="agri-product">Agricultural products</h2>
+                <div class="category" id="agricultural-products">
+                    <!-- 产品项将由 JavaScript 动态生成 -->
                 </div>
             </div>
-
         </div>
     </div>
+
     <!-- Footer menu for mobile -->
     <div class="footer-menu">
         <a href="../index.html" onclick="toggleActive(this)">
@@ -179,20 +106,26 @@
                 oilProduct: 'Oil products',
                 agriProduct: 'Agricultural products',
                 contact: 'Contact',
-                products: [
-                    { name: 'Heavy Fuel Oil', imgAlt: 'Petroleum', imgSrc: './img/HFO 180.png', href: './html/Petroleum.html' },
-                    { name: 'Slide gate', imgAlt: 'Bitumen', imgSrc: './img/slide_gates.jpg', href: './html/Slide gate.html' },
-                    { name: 'Sio2', imgAlt: 'Grain', imgSrc: './img/SiO2_9995.jpg', href: './html/Sio2.html' },
-                    { name: 'Silica brick', imgAlt: 'Petroleum', imgSrc: './img/silica_brick.png', href: './html/Silica brick.html' },
-                    { name: 'Large crystal', imgAlt: 'Bitumen', imgSrc: './img/Large_crystal.png', href: './html/Large crystal.html' },
-                    { name: 'MgO ball', imgAlt: 'Grain', imgSrc: './img/MgO_Ball.png', href: './html/MgO ball.html' },
-                    { name: 'Dead Burned Magnesia', imgAlt: 'Oil', imgSrc: './img/dead_burned_megnesia.png', href: './html/DBM96.html' },
-                    { name: 'Bauxite', imgAlt: 'Oil', imgSrc: './img/Bauxite.png', href: './html/Bauxite.html' },
-                    { name: 'Chicken paw', imgAlt: 'Oil', imgSrc: './img/Chicken_Paw.jpg', href: './html/Chicken paw.html' },
-                    { name: 'Beef Omasum', imgAlt: 'Refractories', imgSrc: './img/beef tripe.png', href: './html/Beef tripe.html' },
-                    { name: 'Pig trotter', imgAlt: 'Animal Viscera', imgSrc: './img/pig_trotter.jpg', href: './html/Pork Feet.html' }
-                ]
+                products: {
+                    ref: [
+                        { name: 'Silica brick', imgAlt: 'Silica brick', imgSrc: '../img/silica_brick.png', href: 'Silica brick.html', learnMore: 'Learn More' },
+                        { name: 'Slide gate', imgAlt: 'Slide gate', imgSrc: '../img/slide_gates.jpg', href: 'Slide gate.html', learnMore: 'Learn More' },
+                        { name: 'Large crystal', imgAlt: 'Large crystal', imgSrc: '../img/Large_crystal.png', href: 'Large crystal.html', learnMore: 'Learn More' },
+                        { name: 'MgO ball', imgAlt: 'MgO ball', imgSrc: '../img/MgO_Ball.png', href: 'MgO ball.html', learnMore: 'Learn More' },
+                        { name: 'Dead Burned Magnesia', imgAlt: 'Dead Burned Magnesia', imgSrc: '../img/dead_burned_megnesia.png', href: 'DBM96.html', learnMore: 'Learn More' },
+                        { name: 'Bauxite', imgAlt: 'Bauxite', imgSrc: '../img/Bauxite.png', href: 'Bauxite.html', learnMore: 'Learn More' }
+                    ],
+                    oil: [
+                        { name: 'Heavy Fuel Oil', imgAlt: 'Petroleum', imgSrc: '../img/HFO 180.png', href: 'Petroleum.html', learnMore: 'Learn More' }
+                    ],
+                    agri: [
+                        { name: 'Chicken paw', imgAlt: 'Chicken paw', imgSrc: '../img/Chicken_Paw.jpg', href: 'Chicken paw.html', learnMore: 'Learn More' },
+                        { name: 'Beef Omasum', imgAlt: 'Beef Omasum', imgSrc: '../img/beef tripe.png', href: 'Beef tripe.html', learnMore: 'Learn More' },
+                        { name: 'Pig trotter', imgAlt: 'Pig trotter', imgSrc: '../img/pig_trotter.jpg', href: 'Pork Feet.html', learnMore: 'Learn More' }
+                    ]
+                }
             },
+            // cn 和 ru 的翻译按相同的方式填充
             cn: {
                 home: '首页',
                 product: '产品',
@@ -200,19 +133,24 @@
                 oilProduct: '石油产品',
                 agriProduct: '农产品',
                 contact: '联系我们',
-                products: [
-                    { name: '重油', imgAlt: '重油', imgSrc: './img/HFO 180.png', href: './html/Petroleum.html' },
-                    { name: '滑门', imgAlt: '滑门', imgSrc: './img/slide_gates.jpg', href: './html/Slide gate.html' },
-                    { name: 'Sio2', imgAlt: 'Sio2', imgSrc: './img/SiO2_9995.jpg', href: './html/Sio2.html' },
-                    { name: '硅砖', imgAlt: '硅砖', imgSrc: './img/silica_brick.png', href: './html/Silica brick.html' },
-                    { name: '大晶体', imgAlt: '大晶体', imgSrc: './img/Large_crystal.png', href: './html/Large crystal.html' },
-                    { name: 'MgO 球', imgAlt: 'MgO 球', imgSrc: './img/MgO_Ball.png', href: './html/MgO ball.html' },
-                    { name: '烧结镁砂', imgAlt: '烧结镁砂', imgSrc: './img/dead_burned_megnesia.png', href: './html/DBM96.html' },
-                    { name: '铝土矿', imgAlt: '铝土矿', imgSrc: './img/Bauxite.png', href: './html/Bauxite.html' },
-                    { name: '鸡爪', imgAlt: '鸡爪', imgSrc: './img/Chicken_Paw.jpg', href: './html/Chicken paw.html' },
-                    { name: '牛肚', imgAlt: '牛肚', imgSrc: './img/beef tripe.png', href: './html/Beef tripe.html' },
-                    { name: '猪蹄', imgAlt: '猪蹄', imgSrc: './img/pig_trotter.jpg', href: './html/Pork Feet.html' }
-                ]
+                products: {
+                    ref: [
+                        { name: '硅砖', imgAlt: '硅砖', imgSrc: '../img/silica_brick.png', href: 'Silica brick.html', learnMore: '了解更多' },
+                        { name: '滑门', imgAlt: '滑门', imgSrc: '../img/slide_gates.jpg', href: 'Slide gate.html', learnMore: '了解更多' },
+                        { name: '大晶体', imgAlt: '大晶体', imgSrc: '../img/Large_crystal.png', href: 'Large crystal.html', learnMore: '了解更多' },
+                        { name: 'MgO 球', imgAlt: 'MgO 球', imgSrc: '../img/MgO_Ball.png', href: 'MgO ball.html', learnMore: '了解更多' },
+                        { name: '烧结镁砂', imgAlt: '烧结镁砂', imgSrc: '../img/dead_burned_megnesia.png', href: 'DBM96.html', learnMore: '了解更多' },
+                        { name: '铝土矿', imgAlt: '铝土矿', imgSrc: '../img/Bauxite.png', href: 'Bauxite.html', learnMore: '了解更多' }
+                    ],
+                    oil: [
+                        { name: '重油', imgAlt: '重油', imgSrc: '../img/HFO 180.png', href: 'Petroleum.html', learnMore: '了解更多' }
+                    ],
+                    agri: [
+                        { name: '鸡爪', imgAlt: '鸡爪', imgSrc: '../img/Chicken_Paw.jpg', href: 'Chicken paw.html', learnMore: '了解更多' },
+                        { name: '牛肚', imgAlt: '牛肚', imgSrc: '../img/beef tripe.png', href: 'Beef tripe.html', learnMore: '了解更多' },
+                        { name: '猪蹄', imgAlt: '猪蹄', imgSrc: '../img/pig_trotter.jpg', href: 'Pork Feet.html', learnMore: '了解更多' }
+                    ]
+                }
             },
             ru: {
                 home: 'Главная',
@@ -221,43 +159,93 @@
                 oilProduct: 'Нефтяные продукты',
                 agriProduct: 'Сельскохозяйственные продукты',
                 contact: 'Контакт',
-                products: [
-                    { name: 'Тяжелое топливо', imgAlt: 'Тяжелое топливо', imgSrc: './img/HFO 180.png', href: './html/Petroleum.html' },
-                    { name: 'Задвижка', imgAlt: 'Задвижка', imgSrc: './img/slide_gates.jpg', href: './html/Slide gate.html' },
-                    { name: 'Sio2', imgAlt: 'Sio2', imgSrc: './img/SiO2_9995.jpg', href: './html/Sio2.html' },
-                    { name: 'Кремнеземный кирпич', imgAlt: 'Кремнеземный кирпич', imgSrc: './img/silica_brick.png', href: './html/Silica brick.html' },
-                    { name: 'Крупный кристалл', imgAlt: 'Крупный кристалл', imgSrc: './img/Large_crystal.png', href: './html/Large crystal.html' },
-                    { name: 'MgO шар', imgAlt: 'MgO шар', imgSrc: './img/MgO_Ball.png', href: './html/MgO ball.html' },
-                    { name: 'Обожжённый магнезит', imgAlt: 'Обожжённый магнезит', imgSrc: './img/dead_burned_megnesia.png', href: './html/DBM96.html' },
-                    { name: 'Боксит', imgAlt: 'Боксит', imgSrc: './img/Bauxite.png', href: './html/Bauxite.html' },
-                    { name: 'Куриные лапы', imgAlt: 'Куриные лапы', imgSrc: './img/Chicken_Paw.jpg', href: './html/Chicken paw.html' },
-                    { name: 'Говяжий рубец', imgAlt: 'Говяжий рубец', imgSrc: './img/beef tripe.png', href: './html/Beef tripe.html' },
-                    { name: 'Свиной ножка', imgAlt: 'Свиной ножка', imgSrc: './img/pig_trotter.jpg', href: './html/Pork Feet.html' }
-                ]
+                products: {
+                    ref: [
+                        { name: 'Кремнеземный кирпич', imgAlt: 'Кремнеземный кирпич', imgSrc: '../img/silica_brick.png', href: 'Silica brick.html', learnMore: 'Узнать больше' },
+                        { name: 'Задвижка', imgAlt: 'Задвижка', imgSrc: '../img/slide_gates.jpg', href: 'Slide gate.html', learnMore: 'Узнать больше' },
+                        { name: 'Крупный кристалл', imgAlt: 'Крупный кристалл', imgSrc: '../img/Large_crystal.png', href: 'Large crystal.html', learnMore: 'Узнать больше' },
+                        { name: 'MgO шар', imgAlt: 'MgO шар', imgSrc: '../img/MgO_Ball.png', href: 'MgO ball.html', learnMore: 'Узнать больше' },
+                        { name: 'Обожжённый магнезит', imgAlt: 'Обожжённый магнезит', imgSrc: '../img/dead_burned_megnesia.png', href: 'DBM96.html', learnMore: 'Узнать больше' },
+                        { name: 'Боксит', imgAlt: 'Боксит', imgSrc: '../img/Bauxite.png', href: 'Bauxite.html', learnMore: 'Узнать больше' }
+                    ],
+                    oil: [
+                        { name: 'Тяжелое топливо', imgAlt: 'Тяжелое топливо', imgSrc: '../img/HFO 180.png', href: 'Petroleum.html', learnMore: 'Узнать больше' }
+                    ],
+                    agri: [
+                        { name: 'Куриные лапы', imgAlt: 'Куриные лапы', imgSrc: '../img/Chicken_Paw.jpg', href: 'Chicken paw.html', learnMore: 'Узнать больше' },
+                        { name: 'Говяжий рубец', imgAlt: 'Говяжий рубец', imgSrc: '../img/beef tripe.png', href: 'Beef tripe.html', learnMore: 'Узнать больше' },
+                        { name: 'Свиной ножка', imgAlt: 'Свиной ножка', imgSrc: '../img/pig_trotter.jpg', href: 'Pork Feet.html', learnMore: 'Узнать больше' }
+                    ]
+                }
             }
         }
+
         function changeLanguage (language) {
             document.getElementById('home-link').textContent = translations[language].home
             document.getElementById('product-link').textContent = translations[language].product
-            document.getElementById('ref-product').textContent = translations[language].refProduct
-            document.getElementById('oil-product').textContent = translations[language].oilProduct
-            document.getElementById('agri-product').textContent = translations[language].agriProduct
+            // 更新所有 .ref-product 元素的文本
+            const refProduct = document.getElementsByClassName('ref-product')
+            for (let i = 0; i < refProduct.length; i++) {
+                refProduct[i].textContent = translations[language].refProduct
+            }
+
+            // 更新所有 .hero-text 元素的文本
+            const oilProduct = document.getElementsByClassName('oil-product')
+            for (let i = 0; i < oilProduct.length; i++) {
+                oilProduct[i].textContent = translations[language].oilProduct
+            }
+
+            // 更新所有 .agriProduct 按钮的文本
+            const agriProduct = document.getElementsByClassName('agri-product')
+            for (let i = 0; i < agriProduct.length; i++) {
+                agriProduct[i].textContent = translations[language].agriProduct
+            }
             document.getElementById('contact-link').textContent = translations[language].contact
 
-            // 更新产品部分
-            const productsGrid = document.querySelector('.products-grid')
-            productsGrid.innerHTML = ''  // 清空现有的产品项
 
-            translations[language].products.forEach(product => {
-                const productItem = `
-                    <div class="product-item">
-                        <a href="${product.href}">
-                            <img src="${product.imgSrc}" alt="${product.imgAlt}">
-                            <h3>${product.name}</h3>
-                        </a>
+            // 更新耐火产品部分
+            const refractoryContainer = document.getElementById('refractory-products')
+            refractoryContainer.innerHTML = ''
+            translations[language].products.ref.forEach(product => {
+                refractoryContainer.innerHTML += `
+                <div class="product" onclick="window.location.href='${product.href}'">
+                    <img src="${product.imgSrc}" alt="${product.imgAlt}">
+                    <div class="description">
+                        <h2>${product.name}</h2>
+                        <button>${product.learnMore}</button>
                     </div>
-                `
-                productsGrid.innerHTML += productItem
+                </div>
+            `
+            })
+
+            // 更新石油产品部分
+            const oilContainer = document.getElementById('oil-products')
+            oilContainer.innerHTML = ''
+            translations[language].products.oil.forEach(product => {
+                oilContainer.innerHTML += `
+                <div class="product" onclick="window.location.href='${product.href}'">
+                    <img src="${product.imgSrc}" alt="${product.imgAlt}">
+                    <div class="description">
+                        <h2>${product.name}</h2>
+                        <button>${product.learnMore}</button>
+                    </div>
+                </div>
+            `
+            })
+
+            // 更新农产品部分
+            const agriContainer = document.getElementById('agricultural-products')
+            agriContainer.innerHTML = ''
+            translations[language].products.agri.forEach(product => {
+                agriContainer.innerHTML += `
+                <div class="product" onclick="window.location.href='${product.href}'">
+                    <img src="${product.imgSrc}" alt="${product.imgAlt}">
+                    <div class="description">
+                        <h2>${product.name}</h2>
+                        <button>${product.learnMore}</button>
+                    </div>
+                </div>
+            `
             })
         }
 
