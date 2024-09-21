@@ -162,6 +162,7 @@
         })
 
         function changeLanguage (language) {
+            localStorage.setItem('selectedLanguage', language)
             document.getElementById('home-link').textContent = translations[language].home
             document.getElementById('product-link').textContent = translations[language].product
             document.getElementById('ref-product').textContent = translations[language].refProduct
@@ -183,7 +184,12 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            changeLanguage('en')
+            const savedLanguage = localStorage.getItem('selectedLanguage')
+            if (savedLanguage) {
+                changeLanguage(savedLanguage)
+            } else {
+                changeLanguage('en') // 默认语言为英文
+            }
         })
 
         // 语言切换
@@ -192,16 +198,23 @@
             const iconClass = selectedOption.getAttribute('data-icon')
 
             this.className = iconClass // 设置下拉框的图标
+            localStorage.setItem('selectedLanguage', this.value) // 存储选择的语言
+            localStorage.setItem('selectedIcon', iconClass) // 存储选择的图标
             changeLanguage(this.value) // 切换语言
         })
 
-        // 初始加载时设置默认图标
+        // 初始加载时设置默认图标和语言
         document.addEventListener('DOMContentLoaded', function () {
             const selectElement = document.getElementById('language-select')
-            const selectedOption = selectElement.options[selectElement.selectedIndex]
-            const iconClass = selectedOption.getAttribute('data-icon')
 
-            selectElement.className = iconClass
+            // 获取存储的语言和图标
+            const storedLanguage = localStorage.getItem('selectedLanguage') || 'en' // 如果没有存储语言，默认设置为 'en'
+            const storedIcon = localStorage.getItem('selectedIcon') || 'flag-icon-us' // 如果没有存储图标，默认设置为美国国旗
+
+            selectElement.value = storedLanguage // 设置存储的语言为下拉框的值
+            selectElement.className = storedIcon // 设置存储的图标为下拉框的 class
+
+            changeLanguage(storedLanguage) // 根据存储的语言切换页面内容
         })
 
         //控制汉堡菜单
