@@ -23,16 +23,18 @@
                     <span></span>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#" id="home-link">Home</a></li>
                     <li>
                         <a href="./html/products.html" id="product-link">Product</a>
                         <ul>
-                            <li><a href="./html/products.html#petroleum-bitumen">Refractory products</a></li>
-                            <li><a href="./html/products.html#grain-oil">Oil products</a></li>
-                            <li><a href="./html/products.html#refractories">Agricultural products</a></li>
+                            <li><a href="./html/products.html#petroleum-bitumen" id="ref-product">Refractory
+                                    products</a></li>
+                            <li><a href="./html/products.html#grain-oil" id="oil-product">Oil products</a></li>
+                            <li><a href="./html/products.html#refractories" id="agri-product">Agricultural products</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="./html/contact.html">Contact</a></li>
+                    <li><a href="./html/contact.html" id="contact-link">Contact</a></li>
                     <li class="language-selector">
                         <select id="language-select" onchange="changeLanguage(this.value)">
                             <option value="en" data-icon="flag-icon-us" selected>EN</option>
@@ -48,21 +50,21 @@
             <div class="slides">
                 <div class="slide">
                     <img src="./img/lunbo2.webp" alt="bitumen 1">
-                    <h1>Welcome to Interblack</h1>
-                    <p>Move products, satisfy demands.</p>
-                    <a href="./html/LearnMore.html" class="btn">Learn more</a>
+                    <h1 class="hero-title">Welcome to Interblack</h1>
+                    <p class="hero-text">Move products, satisfy demands.</p>
+                    <a href="./html/LearnMore.html" class="btn learn-more-btn">Learn more</a>
                 </div>
                 <div class="slide">
                     <img src="./img/lunbo.webp" alt="bitumen 3">
-                    <h1>Welcome to Interblack</h1>
-                    <p>Your trusted partner in business.</p>
-                    <a href="./html/LearnMore.html" class="btn">Learn more</a>
+                    <h1 class="hero-title">Welcome to Interblack</h1>
+                    <p class="hero-text">Your trusted partner in business.</p>
+                    <a href="./html/LearnMore.html" class="btn learn-more-btn">Learn more</a>
                 </div>
                 <div class="slide">
                     <img src="./img/lunbo1.webp" alt="bitumen 2">
-                    <h1>Welcome to Interblack</h1>
-                    <p>Innovative solutions for a better future.</p>
-                    <a href="./html/LearnMore.html" class="btn">Learn more</a>
+                    <h1 class="hero-title">Welcome to Interblack</h1>
+                    <p class="hero-text">Innovative solutions for a better future.</p>
+                    <a href="./html/LearnMore.html" class="btn learn-more-btn">Learn more</a>
                 </div>
             </div>
             <div class="dots">
@@ -76,7 +78,7 @@
 
     <section id="about" class="about">
         <div class="container">
-            <h2>About Us</h2>
+            <h2 id="about-title">About Us</h2>
             <p id="about-text">
                 Welcome to Interblack, your premier partner in the dynamic realm of international trade. With a
                 steadfast
@@ -108,7 +110,7 @@
 
 
     <section class="products-section">
-        <h2>Products</h2>
+        <h2 id="products">Products</h2>
         <div class="products-grid">
             <div class="product-item">
                 <a href="./html/Petroleum.html">
@@ -276,6 +278,163 @@
 
 
     <script>
+        const translations = {
+            en: {
+                home: 'Home',
+                product: 'Product',
+                refProduct: 'Refractory products',
+                oilProduct: 'Oil products',
+                agriProduct: 'Agricultural products',
+                contact: 'Contact',
+                heroTitle: 'Welcome to Interblack',
+                heroText: 'Move products, satisfy demands.',
+                learnMore: 'Learn more',
+                aboutTitle: 'About Us',
+                aboutText: 'Welcome to Interblack, your premier partner in the dynamic realm of international trade. With asteadfastcommitment to excellence, Interblack specializes in the global exchange of bulk commodities ranging from crude oil and bitumen to agricultural products, grains, refractory materials, and more. Our expertise lies in navigating the complexities of global markets, ensuring seamless transactions and optimal outcomes for our esteemed clientele. Founded on the principles of integrity, reliability, and innovation, Interblack leverages decades of industry experience to deliver tailored solutions that meet the diverse needs of our partners worldwide. Whether facilitating large-scale transactions or providing strategic market insights, we are dedicated to fostering long-term relationships built on trust and mutual success. At Interblack, we combine deep industry knowledge with a forward-thinking approach to anticipate market trends and capitalize on emerging opportunities. Our comprehensive network, spanning across continents, enables us to efficiently connect producers and consumers, driving value and growth in every transaction.<br><br>As a trusted leader in international trade, Interblack continues to set the standard for excellence, delivering results that propel businesses forward in a rapidly evolving global landscape. Join us in redefining possibilities and unlocking new avenues for success in the world of bulk commodity trading.',
+                productsTitle: 'Products',
+                products: [
+                    { name: 'Heavy Fuel Oil', imgAlt: 'Petroleum', imgSrc: './img/HFO 180.png', href: './html/Petroleum.html' },
+                    { name: 'Slide gate', imgAlt: 'Bitumen', imgSrc: './img/slide_gates.jpg', href: './html/Slide gate.html' },
+                    { name: 'Sio2', imgAlt: 'Grain', imgSrc: './img/SiO2_9995.jpg', href: './html/Sio2.html' },
+                    { name: 'Silica brick', imgAlt: 'Petroleum', imgSrc: './img/silica_brick.png', href: './html/Silica brick.html' },
+                    { name: 'Large crystal', imgAlt: 'Bitumen', imgSrc: './img/Large_crystal.png', href: './html/Large crystal.html' },
+                    { name: 'MgO ball', imgAlt: 'Grain', imgSrc: './img/MgO_Ball.png', href: './html/MgO ball.html' },
+                    { name: 'Dead Burned Magnesia', imgAlt: 'Oil', imgSrc: './img/dead_burned_megnesia.png', href: './html/DBM96.html' },
+                    { name: 'Bauxite', imgAlt: 'Oil', imgSrc: './img/Bauxite.png', href: './html/Bauxite.html' },
+                    { name: 'Chicken paw', imgAlt: 'Oil', imgSrc: './img/Chicken_Paw.jpg', href: './html/Chicken paw.html' },
+                    { name: 'Beef Omasum', imgAlt: 'Refractories', imgSrc: './img/beef tripe.png', href: './html/Beef tripe.html' },
+                    { name: 'Pig trotter', imgAlt: 'Animal Viscera', imgSrc: './img/pig_trotter.jpg', href: './html/Pork Feet.html' }
+                ],
+                footer: {
+                    aboutUs: 'About us',
+                    contactUs: 'Contact Us',
+                    rights: 'All rights reserved.'
+                }
+            },
+            cn: {
+                home: '首页',
+                product: '产品',
+                refProduct: '耐火产品',
+                oilProduct: '石油产品',
+                agriProduct: '农产品',
+                contact: '联系我们',
+                heroTitle: '欢迎来到 Interblack',
+                heroText: '运送产品，满足需求。',
+                learnMore: '了解更多',
+                aboutTitle: '关于我们',
+                aboutText: '欢迎来到Interblack，您在国际贸易充满活力的领域中的首选合作伙伴。Interblack专注于全球大宗商品的交换，从原油和沥青到农产品、谷物、耐火材料等，我们致力于卓越的承诺。我们拥有驾驭全球市场复杂性的专业知识，确保为尊贵的客户提供无缝交易和最佳结果。Interblack秉承诚信、可靠性和创新的原则，利用数十年的行业经验，提供满足全球合作伙伴需求的定制解决方案。无论是促成大规模交易，还是提供战略市场见解，我们都致力于建立建立在信任和共同成功基础上的长期关系。在Interblack，我们结合深厚的行业知识和前瞻性思维，预见市场趋势并利用新兴机遇。我们广泛的网络覆盖全球，使我们能够高效连接生产商和消费者，在每一笔交易中推动价值和增长。作为国际贸易的可信赖领导者，Interblack始终保持卓越标准，推动企业在不断变化的全球环境中前进。加入我们，重新定义可能性，在大宗商品交易的世界中开启成功的新途径。',
+                productsTitle: '产品',
+                products: [
+                    { name: '重油', imgAlt: '重油', imgSrc: './img/HFO 180.png', href: './html/Petroleum.html' },
+                    { name: '滑门', imgAlt: '滑门', imgSrc: './img/slide_gates.jpg', href: './html/Slide gate.html' },
+                    { name: 'Sio2', imgAlt: 'Sio2', imgSrc: './img/SiO2_9995.jpg', href: './html/Sio2.html' },
+                    { name: '硅砖', imgAlt: '硅砖', imgSrc: './img/silica_brick.png', href: './html/Silica brick.html' },
+                    { name: '大晶体', imgAlt: '大晶体', imgSrc: './img/Large_crystal.png', href: './html/Large crystal.html' },
+                    { name: 'MgO 球', imgAlt: 'MgO 球', imgSrc: './img/MgO_Ball.png', href: './html/MgO ball.html' },
+                    { name: '烧结镁砂', imgAlt: '烧结镁砂', imgSrc: './img/dead_burned_megnesia.png', href: './html/DBM96.html' },
+                    { name: '铝土矿', imgAlt: '铝土矿', imgSrc: './img/Bauxite.png', href: './html/Bauxite.html' },
+                    { name: '鸡爪', imgAlt: '鸡爪', imgSrc: './img/Chicken_Paw.jpg', href: './html/Chicken paw.html' },
+                    { name: '牛肚', imgAlt: '牛肚', imgSrc: './img/beef tripe.png', href: './html/Beef tripe.html' },
+                    { name: '猪蹄', imgAlt: '猪蹄', imgSrc: './img/pig_trotter.jpg', href: './html/Pork Feet.html' }
+                ],
+                footer: {
+                    aboutUs: '关于我们',
+                    contactUs: '联系我们',
+                    rights: '版权所有。'
+                }
+            },
+            ru: {
+                home: 'Главная',
+                product: 'Продукция',
+                refProduct: 'Огнеупорные продукты',
+                oilProduct: 'Нефтяные продукты',
+                agriProduct: 'Сельскохозяйственные продукты',
+                contact: 'Контакт',
+                heroTitle: 'Добро пожаловать в Interblack',
+                heroText: 'Перемещайте продукты, удовлетворяйте спрос.',
+                learnMore: 'Узнать больше',
+                aboutTitle: 'О нас',
+                aboutText: 'Добро пожаловать в Interblack, вашего ведущего партнёра в динамичной сфере международной торговли. Interblack специализируется на глобальном обмене сырьевыми товарами, начиная с сырой нефти и битума и заканчивая сельскохозяйственной продукцией, зерновыми, огнеупорными материалами и многим другим. Наш опыт помогает успешно ориентироваться в сложностях мировых рынков, обеспечивая безупречные сделки и оптимальные результаты для наших уважаемых клиентов. Interblack, основанный на принципах честности, надёжности и инноваций, использует многолетний опыт, чтобы предлагать индивидуальные решения, удовлетворяющие разнообразные потребности наших партнёров по всему миру. Будь то содействие крупным сделкам или предоставление стратегических рыночных прогнозов, мы стремимся к созданию долгосрочных отношений, основанных на доверии и взаимном успехе. В Interblack мы совмещаем глубокие знания отрасли с новаторским подходом, чтобы предвидеть рыночные тенденции и использовать новые возможности. Наша обширная сеть, охватывающая континенты, позволяет эффективно соединять производителей и потребителей, способствуя росту и добавленной стоимости в каждой сделке. Как надёжный лидер в международной торговле, Interblack продолжает задавать стандарты совершенства, предоставляя результаты, которые продвигают бизнес вперёд в стремительно меняющемся глобальном ландшафте. Присоединяйтесь к нам в переопределении возможностей и открывайте новые пути к успеху в мире торговли сырьевыми товарами.',
+                productsTitle: 'Продукция',
+                products: [
+                    { name: 'Тяжелое топливо', imgAlt: 'Тяжелое топливо', imgSrc: './img/HFO 180.png', href: './html/Petroleum.html' },
+                    { name: 'Задвижка', imgAlt: 'Задвижка', imgSrc: './img/slide_gates.jpg', href: './html/Slide gate.html' },
+                    { name: 'Sio2', imgAlt: 'Sio2', imgSrc: './img/SiO2_9995.jpg', href: './html/Sio2.html' },
+                    { name: 'Кремнеземный кирпич', imgAlt: 'Кремнеземный кирпич', imgSrc: './img/silica_brick.png', href: './html/Silica brick.html' },
+                    { name: 'Крупный кристалл', imgAlt: 'Крупный кристалл', imgSrc: './img/Large_crystal.png', href: './html/Large crystal.html' },
+                    { name: 'MgO шар', imgAlt: 'MgO шар', imgSrc: './img/MgO_Ball.png', href: './html/MgO ball.html' },
+                    { name: 'Обожжённый магнезит', imgAlt: 'Обожжённый магнезит', imgSrc: './img/dead_burned_megnesia.png', href: './html/DBM96.html' },
+                    { name: 'Боксит', imgAlt: 'Боксит', imgSrc: './img/Bauxite.png', href: './html/Bauxite.html' },
+                    { name: 'Куриные лапы', imgAlt: 'Куриные лапы', imgSrc: './img/Chicken_Paw.jpg', href: './html/Chicken paw.html' },
+                    { name: 'Говяжий рубец', imgAlt: 'Говяжий рубец', imgSrc: './img/beef tripe.png', href: './html/Beef tripe.html' },
+                    { name: 'Свиной ножка', imgAlt: 'Свиной ножка', imgSrc: './img/pig_trotter.jpg', href: './html/Pork Feet.html' }
+                ],
+
+                footer: {
+                    aboutUs: 'О нас',
+                    contactUs: 'Контакт',
+                    rights: 'Все права защищены.'
+                }
+            }
+        }
+
+        function changeLanguage (language) {
+            document.getElementById('home-link').textContent = translations[language].home
+            document.getElementById('product-link').textContent = translations[language].product
+            document.getElementById('ref-product').textContent = translations[language].refProduct
+            document.getElementById('oil-product').textContent = translations[language].oilProduct
+            document.getElementById('agri-product').textContent = translations[language].agriProduct
+            document.getElementById('contact-link').textContent = translations[language].contact
+            document.getElementById('products').textContent = translations[language].product
+            // 更新所有 .hero-title 元素的文本
+            const heroTitles = document.getElementsByClassName('hero-title')
+            for (let i = 0; i < heroTitles.length; i++) {
+                heroTitles[i].textContent = translations[language].heroTitle
+            }
+
+            // 更新所有 .hero-text 元素的文本
+            const heroTexts = document.getElementsByClassName('hero-text')
+            for (let i = 0; i < heroTexts.length; i++) {
+                heroTexts[i].textContent = translations[language].heroText
+            }
+
+            // 更新所有 .learn-more-btn 按钮的文本
+            const learnMoreButtons = document.getElementsByClassName('learn-more-btn')
+            for (let i = 0; i < learnMoreButtons.length; i++) {
+                learnMoreButtons[i].textContent = translations[language].learnMore
+            }
+
+            document.getElementById('about-title').textContent = translations[language].aboutTitle
+            document.getElementById('about-text').textContent = translations[language].aboutText
+
+            // 更新产品部分
+            const productsGrid = document.querySelector('.products-grid')
+            productsGrid.innerHTML = ''  // 清空现有的产品项
+
+            translations[language].products.forEach(product => {
+                const productItem = `
+                    <div class="product-item">
+                        <a href="${product.href}">
+                            <img src="${product.imgSrc}" alt="${product.imgAlt}">
+                            <h3>${product.name}</h3>
+                        </a>
+                    </div>
+                `
+                productsGrid.innerHTML += productItem
+            })
+
+            // 更新页脚
+            document.querySelector('.footer-links a:nth-child(2)').textContent = translations[language].footer.aboutUs
+            document.querySelector('.footer-links a:nth-child(3)').textContent = translations[language].footer.contactUs
+            document.querySelector('.footer-content p').textContent = `&copy; 2024 ${translations[language].footer.rights}`
+        }
+
+        // 初始加载时设置默认图标和语言
+        document.addEventListener('DOMContentLoaded', function () {
+            changeLanguage('en')
+        })
+
+
         function toggleText () {
             var text = document.getElementById("about-text")
             var link = document.querySelector(".show-more")

@@ -50,6 +50,7 @@ nav ul.nav-list {
 nav ul.nav-list li {
   position: relative;
   margin-right: 15px;
+  list-style: none;
 }
 
 nav ul.nav-list li a {
