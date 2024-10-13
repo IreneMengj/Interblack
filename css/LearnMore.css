@@ -167,6 +167,7 @@ nav ul.nav-list li ul li a:hover {
   color: #666;
   line-height: 1.8;
   text-align: left;
+  margin-bottom: 20px;
 }
 
 /* Base styles for the footer menu */
