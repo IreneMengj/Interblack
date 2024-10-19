@@ -50,6 +50,7 @@ nav ul.nav-list {
 nav ul.nav-list li {
   position: relative;
   margin-right: 15px;
+  list-style: none;
 }
 
 nav ul.nav-list li a {
@@ -164,10 +165,13 @@ main {
 }
 
 .product-image {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product-description {
@@ -245,14 +249,17 @@ main {
   }
 
   .product-image {
-    width: 80%; /* Adjust width for mobile, making image take up more space */
-    margin-right: 0; /* Remove margin on right since it's now stacked */
-    margin-bottom: 20px; /* Add margin below the image for spacing */
+    width: 80%; /* 移动端图片占满100%宽度 */
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .product-description {
     width: 90%; /* Adjust width for mobile, making description take up more space */
-    text-align: left; /* Center the text for mobile layout */
+    text-align: left;
+    margin-bottom: 20px; /* Center the text for mobile layout */
   }
 }
 

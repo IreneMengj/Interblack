@@ -49,6 +49,7 @@ nav ul.nav-list {
 nav ul.nav-list li {
   position: relative;
   margin-right: 15px;
+  list-style: none;
 }
 
 nav ul.nav-list li a {
@@ -167,6 +168,7 @@ nav ul.nav-list li ul li a:hover {
   color: #666;
   line-height: 1.8;
   text-align: left;
+  margin-bottom: 20px;
 }
 
 /* Base styles for the footer menu */

@@ -12,11 +12,33 @@
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="products.html">Product</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-container">
+        <img src="../img/logo.jpg" alt="Logo" class="logo">
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li>
+            <a href="./products.html" id="product-link">Product</a>
+            <ul>
+              <li><a href="./products.html#petroleum-bitumen">Refractory products</a></li>
+              <li><a href="./products.html#grain-oil">Oil products</a></li>
+              <li><a href="./products.html#refractories">Agricultural products</a></li>
+            </ul>
+          </li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li class="language-selector">
+            <select id="language-select" onchange="changeLanguage(this.value)">
+              <option value="en" data-icon="flag-icon-us" selected>EN</option>
+              <option value="cn" data-icon="flag-icon-cn">CN</option>
+              <option value="ru" data-icon="flag-icon-ru">RU</option>
+            </select>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
